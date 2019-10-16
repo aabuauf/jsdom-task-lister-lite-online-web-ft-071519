@@ -13,5 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  // locate your element and add the Click Event Listener
+  document.getElementById("tasks").addEventListener("click", function (e) {
+    // e.target is our targetted element.
+    // try doing console.log(e.target.nodeName), it will result LI
+    if (e.target && e.target.nodeName == "LI") {
+      e.target.style.color = "#ff0000";
+    }
+  });
+
 });
 
